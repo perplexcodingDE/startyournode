@@ -1,0 +1,47 @@
+/*
+- Colors
+- Scrollbar
+*/
+/* Colors
+----------------------------------------- */
+/* Scrollbar
+----------------------------------------- */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #CCC;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #494949;
+}
+
+/*
+- Import SCSS-Files
+- General Structure
+-
+*/
+/* General
+----------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/*# sourceMappingURL=main.css.map */
