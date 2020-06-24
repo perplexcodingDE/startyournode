@@ -12,8 +12,8 @@ pipeline {
         stage('Docker Build') {
             steps {
                 sh encoding: 'UTF-8', label: '', returnStdout: true, script: '''
-                docker build -t jenkins-basic:1.0.0-${BUILD_NUMBER} .
-                docker tag jenkins-basic:1.0.0-${BUILD_NUMBER} jenkins-basic:latest
+                docker build -t startyournode:1.0.0-${BUILD_NUMBER} .
+                docker tag startyournode:1.0.0-${BUILD_NUMBER} startyournode:latest
                 '''
             }
         }

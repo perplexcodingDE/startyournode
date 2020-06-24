@@ -29,7 +29,11 @@
 /*
 - Import SCSS-Files
 - General Structure
--
+- Page-Top
+- Footer
+- Legal
+  - Imrpint
+  - Data
 */
 /* General
 ----------------------------------------- */
@@ -41,7 +45,276 @@
 }
 
 body {
+  height: 100%;
+  width: 100%;
   font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+  background: #7F6DFF;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.page-top {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.page-top img {
+  user-select: none;
+  width: 40%;
+}
+.page-top .divider {
+  height: 1px;
+  width: 10rem;
+  background: #fff;
+  margin-bottom: 3.5rem;
+}
+.page-top .page-top-content {
+  width: 50%;
+  text-align: center;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.page-top .page-top-content a {
+  width: 35%;
+  margin-top: 1.5rem;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  padding: 0.5rem 0;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.page-top .page-top-content a:hover {
+  color: #7F6DFF;
+  background: #fff;
+}
+
+/* Footer
+----------------------------------------- */
+footer {
+  padding: 5rem 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+footer .footer__navigation {
+  margin-bottom: 1.5rem;
+}
+footer .footer__navigation ul {
+  display: flex;
+  justify-content: center;
+}
+footer .footer__navigation ul li {
+  margin: 0 0.75rem;
+}
+footer .footer__navigation ul li a {
+  font-size: 0.8rem;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.7);
+}
+footer .footer__navigation ul li a:hover {
+  color: #fff;
+}
+footer .footer__information {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+footer .footer__information i {
+  color: rgba(255, 255, 255, 0.7);
+}
+footer .footer__information a {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Legal (Imprint, Data)
+----------------------------------------- */
+.legal-container {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  text-align: left;
+}
+.legal-container .legal__title-data {
+  user-select: none;
+  background: #fff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem 0;
+}
+.legal-container .legal__title-data h1 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+}
+.legal-container .legal__title {
+  user-select: none;
+  background: #fff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem 0;
+}
+.legal-container .legal__title h1 {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+}
+.legal-container .legal__content {
+  padding: 0 5rem;
+}
+.legal-container .legal__content h2 {
+  margin: 0.5rem 0;
+  text-transform: uppercase;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+.legal-container .legal__content h3 {
+  margin: 1rem 0 0.25rem 0;
+  font-weight: 600;
+}
+
+/* Responsive-Part
+----------------------------------------- */
+@media screen and (max-width: 1000px) {
+  .page-top img {
+    width: 50%;
+  }
+  .page-top .page-top-content {
+    font-size: 0.85rem;
+  }
+  .page-top .page-top-content a {
+    width: 55%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .page-top img {
+    width: 60%;
+    margin-bottom: 2rem;
+  }
+  .page-top .page-top-content {
+    font-size: 0.85rem;
+  }
+  .page-top .page-top-content a {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .page-top img {
+    width: 60%;
+    margin-bottom: 2rem;
+  }
+  .page-top .page-top-content {
+    font-size: 0.85rem;
+  }
+  .page-top .page-top-content a {
+    width: 85%;
+  }
+
+  .legal-container .legal__title-data {
+    padding: 2rem 0;
+  }
+  .legal-container .legal__title-data h1 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+  }
+  .legal-container .legal__title {
+    padding: 2rem 0;
+  }
+  .legal-container .legal__title h1 {
+    font-size: 2.25rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+  }
+  .legal-container .legal__content {
+    padding: 0 0.75rem;
+  }
+  .legal-container .legal__content h2 {
+    margin: 0.5rem 0;
+    font-size: 1.25rem;
+  }
+  .legal-container .legal__content p {
+    font-size: 0.75rem;
+  }
+  .legal-container .legal__content h3 {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .page-top img {
+    width: 60%;
+    margin-bottom: 2rem;
+  }
+  .page-top .page-top-content {
+    font-size: 0.85rem;
+    width: 90%;
+  }
+  .page-top .page-top-content a {
+    width: 90%;
+  }
+
+  footer .footer__navigation ul {
+    display: flex;
+    justify-content: center;
+  }
+  footer .footer__navigation ul li {
+    margin: 0 0.75rem;
+  }
+  footer .footer__navigation ul li a {
+    font-size: 0.7rem;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  footer .footer__information {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.7rem;
+  }
+
+  .page__title h1 {
+    font-size: 20vh;
+  }
+}
+@media screen and (max-width: 320px) {
+  footer .footer__navigation ul {
+    display: flex;
+    justify-content: center;
+  }
+  footer .footer__navigation ul li {
+    margin: 0 0.75rem;
+  }
+  footer .footer__navigation ul li a {
+    font-size: 0.4rem;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  footer .footer__information {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.5rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,17 +1,17 @@
 version: '3.7'
 services:
-  jenkins-basic:
-    image: jenkins-basic:latest
+  startyournode:
+    image: startyournode:latest
     ports:
       - 8020:80
     labels:
-      - "traefik.http.routers.jenkins-basic.rule=Host(`jenkins-basic.t.pascal-haupt.codes`)"
+      - "traefik.http.routers.startyournode.rule=Host(`startyournode.t.pascal-haupt.codes`)"
       - "traefik.port=80"
       - "traefik.enable=true"
       #      - "traefik.http.routers.portfolio-template.service=portfolio-template-gpt"
-      - "traefik.http.routers.jenkins-basic.tls=true"
-      - "traefik.http.routers.jenkins-basic.tls.certresolver=myresolver"
-      - "traefik.http.routers.jenkins-basic.entrypoints=websecure, web"
+      - "traefik.http.routers.startyournode.tls=true"
+      - "traefik.http.routers.startyournode.tls.certresolver=myresolver"
+      - "traefik.http.routers.startyournode.entrypoints=websecure, web"
       - "traefik.docker.network=docker0"
     networks:
       - docker0
